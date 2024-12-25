@@ -1,0 +1,190 @@
+(Day 1)
+
+# Intro
+ > Para começar a criar um website, uma página da internet, é imprescindível entender o que é o HTML, pois ele é a base de toda página da internet. HTML significa Hyper Text Markup Language, ou seja, linguagem de marcação de hiper-texto. É uma padronização, um consenço, e um modo para escrever e marcar (classificar) longas sequências de texto. Sim, uma página da internet é um conglomerado de texto.
+
+ > HTML é uma linguagem de marcação, ou seja, você vai marcar como um determinado conteúdo vai ser interpretado pelo navegador. Ela define elementos que te ajudam a especificar como um determinado conteúdo deve ser interpretado pelo navegador. Então há elementos para especificar apenas um título, parágrafo, imagem e outras coisas.
+
+ > Um dos trabalhos de um navegador é interpretar o documento HTML. Ele vai usar o documento para decidir como exibir os elementos do documento formando assim as nossas tão conhecidas "páginas da internet".
+
+# Elemento HTML
+ > Um elemento HTML é definido por uma etiqueta (tag) de abertura e fechamento. Por exemplo um parágrafo:
+
+   (etq. abertura)     (etq. fechamento)
+	 <p>                 </p>
+
+ > Todas essas etiquetas tem a estrutura com colchetes ângulares < >, o que muda é a distinção entre a etiqueta de abertura e fechamento, onde a de fechamento contém uma barra antes do identificador da etiqueta. Logo, em uma etiqueta padrão você vai ter o colchete angular de abertura; o identificador da etiqueta; o colchete angular de fechamento; o conteúdo do elemento; e, seguindo o padrão, a etiqueta de fechamento. Vale lembrar que existem elementos que são vazios, isso significa que eles não tem conteúdo e nem etiqueta de fechamento (por exemplo o elemento <br> que define uma quebra de linha no documento).
+
+	<nome_etiqueta> Conteúdo </nome_etiqueta>
+
+# Um simples documento HTML
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Title</title>
+	</head>
+	<body>
+		<h1>My First Heading</h1>
+		<p>My first paragraph</p>
+	</body>
+</html>
+
+ > "<!DOCTYPE html>" Informa ao navegador que o documento é um documento HTML5, é um emento que ajuda (ao informar) os navegadores a exibir páginas corretamente. É um elemento que precisa aparecer apenas um vez antes de todo e qualquer elemento.
+ > "<html> ... </html>" É o elemento raiz e essencial de um documento HTML.
+ > "<head> ... </head>" É o elemento que abrange os elementos semânticos (comportamentais) do documento.
+ > "<title> ... </title>" É um elemento comportamental usado para especificar o título da página que vai aparecer na barra do navegador e na aba do navegador.
+ > "<body> ... </body>" É o elemento que abrange os elementos visuais do documento.
+ > "<h1> ... </h1>" É um elemento visual que define um título de maior importância.
+ > "<p> ... </p>" É um emento visual que define um parágrafo.
+
+ > HTML não é sensível a caixa alta, isso significa que os elementos <P> e <p> são a mesma coisa, mas a recomendação da W3C é definir os elementos em caixa baixa.
+
+# Criando uma página HTML
+ > Sabendo da estrutura padrão de um documento HTML, ou seja, de uma página da internet, tudo o que você vai precisar para criar uma página HTML é de um navegador e um editor de texto. No caso do Windows, temos o navegador padrão "Edge" e o editor de texto pode ser o simples "bloco de notas". Ao criar o documento de texto só é preciso fazer uma alteração nele ao salvar, ao salvar a extensão do arquivo deve ser ".htm" ou ".html" (são a mesma coisa) invés de ".txt". Uma extensão ".txt" diz ao sistema que o arquivo é um arquivo de texto padrão, por outro lado, uma extensão ".html" informa ao sistema que o arquivo é um documento HTML (normalmente aberto por padrão por navegadores).
+
+# Elementos básicos
+ > Um elemento é tudo o que estiver contido entre a abertura e o fechamento de uma etiqueta. Elementos podem ser aninhados, ou seja, podemos ter elementos dentro de elementos.
+
+ > Os elementos de título "<h1>" seguem até "<h6>", onde "<h1>" informa o título de maior importância e "<h6>" o título de menor importância.
+
+ > Parágrafos de texto são definidos pelo elemento "<p>".
+
+ > Quebras de linhas em parágrafos com o elemento "<br>".
+	
+	(exemplo de quebra de linha em um parágrafo)
+	<p>This is a<br>paragraph with a line brak.</p>
+
+ > Links são definidos pelo elemento "<a href="...">" (significa âncora). "href" é um atributo de um elemento e atributos apenas fornecem ao navegador informações adicionais sobre o elemento. Diferentes elementos tem diferentes atributos.
+
+	(exemplo de link)
+	<a href="https://www.google.com"> Google </a>
+
+ > Imagens são definidas pelo elemento "<img>" e os atributos desse elemento são "src" que informa a fonte do arquivo da image, "alt" uma descrição ou texto altenativo à imagem caso ela não carregue ou caso o usuário estiver usando um leitor de tela, "width" largura da imagem, "height" altura da imagem.
+	
+	(exemplo de imagem)
+	<img src="cat.jpg" alt="A fluffy fat white cat." width="300" height="250">
+
+# Atributos
+ > Todo elemento HTML pode contém atributos que são informações adicionais sobre um elemento. Ele sempre deve ser especificado na etiqueta de abertura e é no padrão nome/valor (por exemplo: name="value").
+
+ > O atributo "style" é utilizado para adicionar a um elemento cores, font, tamanho, e mais.
+
+	(exemplo do uso do atributo "style")
+	<p style="color: red;">This is a red paragraph.</p>
+
+ > O atributo "lang" é utilizado na etiqueta "<html>" e especifica o idioma da página. Ele sempre deve ser especificado, pois ajudam os motores de busca e navegadores na hora de buscar e exibir a página. No atributo "lang" podemos especificar não só o idioma mas também o país, por exemplo "en-US" para Inglês-USA ou "pt-BR" para Português-Brasil. Todos esses códigos de linguagens (HTML language codes) podem sem encontrados no site da W3C (https://www.w3schools.com/tags/ref_language_codes.asp).
+
+	(exemplo do uso do atributo "lang")
+	<html lang="pt"> ... </html>
+
+ > O atributo "title" é utilizado para fornecer "dicas" ao passar o mouse por cima de um elemento. É uma maneira de você dar informações extra a qualquer elemento que quiser.
+
+	(exemplo do uso do atributo "title")
+	<p title="I'm a tooltip">This is a paragraph.</p>
+
+ > Por convenção a W3C recomenda usar letras minúsculas para atributos. Também recomenda sempre usar áspas (simples ou duplas) para valores de atributos (e caso haja áspas no conteúdo do valor do atributo, use outro tipo de aspa no interior/exterior). A especificação não obriga usar áspas e nem mesmo letras minúsculas, mas é uma recomendação da W3C usar.
+
+(Day 2)
+
+# Cabeçalhos
+ > Vão de "<h1>" até "<h6>" onde "<h1>" é o cabeçalho de maior importância, e "<h6>" de menor importância. Por padrão o navegador vai estilizar certas etiquetas, mas é importânte não usar uma etiqueta de cabeçalho mais prioritária apenas para tornar o texto maior, pra isso temos o CSS. As diferentes etiquetas são puramente semântica, isto é, elas servem inteiramente para motores de buscar estruturar melhor seu site na hora de exibir ele em uma busca.
+
+# Parágrafos
+ > Com HTML você não pode mudar a forma como o conteúdo (texto principalmente) é exibido. Por exemplo, você não pode adicionar espaços ou linhas extras em um parágrafo qualquer, todo e qualquer espaço/quebra extra o navegador vai ignorar.
+ > A etiqueta "<hr>" (regra horizontal) é um elemento vázio e como regra é utilizado para separar conteúdo, ou quando há uma mudança de conteúdo, (texto).
+ > A etiqueta "<br>" é um elemento vazio e é usado quando você quer uma nova linha sem iniciar um novo parágrafo.
+ > O "problema do poema": Caso queira preservar os espaços e quebras de linhas, você pode utilizar a etiqueta "<pre> ... </pre>" e ele vai preservar a formatação básica que você produzir. Geralmente esse elemento também é estilizado com uma fonte de tamanho fixo (geralmente a Courier).
+
+# Estilos
+ > Você pode mudar o estilo de um elemento com o atributo "style".
+	
+	(exemplo da estrutura do atributo style)
+	<tagname style="property:value;">
+
+ > "property" é uma propriedade CSS e "value" é um valor CSS (CSS é outro tópico, aqui é apenas uma visão geral para ver que estilos não é reponsabilidade do HTML e sim do CSS que é outro tipo de linguagem que usamos para estilizar um documento HTML.
+
+	(exemplo de algumas propriedades css)
+	
+	background-color:powderblue;
+	 > Define a cor de fundo de um elemento.
+	
+	color:red;
+	 > Define a cor do texto de um elemento.
+
+	font-family:courier;
+	 > Define uma fonte a ser usada por um elemento.
+
+	font-size:160%;
+	 > Define o tamanho da fonte a ser usada por um elemento.
+
+	text-align:center;
+	 > Define o alinhamento horizontal do texto do elemento.
+
+# Formatação de Texto
+
+	(exemplo de etiquetas para formatar texto)
+	
+	"<b>...</b>"
+	 > Define um texto em negrito sem importância.
+	
+	"<strong>...</strong>"
+	 > Define um texto de alta importância e normalmente é renderizado em negrito pelos navegadores.
+
+	"<i>...</i>"
+	 > Define parte de um texto em voz alterada ou clima diferente e é renderizado em itálico.
+
+	"<em>...</em>"
+	 > Define um texto de êmfase. Leitores de tela irão pronunciar as palavras dentro dessa etiqueta com êmfase usando tensão verbal.
+
+	"<small>...</small>"
+	 > Define um texto pequeno.
+	
+	"<mark>...</mark>"
+	 > Define um texto que deve ser realçado
+
+	"<del>...</del>"
+	 > Define um texto que foi apagado/removido de um documento. Geralmente é renderizado com uma linha atravessando a palavra.
+
+	"<ins>...</ins>"
+	 > Define um texto que foi inserido no documento. Geralmente é renderizado com sublinhado.
+
+	"<sub>...</sub>"
+	 > Define um texto subescrito, utilizado geralmente em fórmulas químicas.
+
+	"<sup>...</sup>"
+	 > Define um texto sobescrito, utilizado geralmente em referências de rodapé.
+
+	"<blockquote cite="fonte.com">...<blockquote>"
+	 > Define uma citação de outra fonte.
+
+	"<q>...</q>"
+	 > Define uma pequena citação.
+
+	"<abbr title="full word">...</abbr>"
+	 > Define uma abreviação e ajuda motores de busca.
+
+	"<address>...</address>"
+	 > Define informações de contato do proprietário do site ou de quem escreveu o texto.
+
+	"<cite>...</cite>"
+	 > Define o título de uma obra criativa (livro, poema, música, filme, quadro, escultura etc.) - O nome do autor não é o título da obra.
+
+	"<bdo dir="rtl">...</bdo>"
+	 > Significa "Bi-Directional Override" e muda a direção de escrita do texto (direita para esquerda / esquerda para direita). Depende do suporte do navegador.
+
+(Day 3)
+
+# Cores HTML
+ > Em HTML podemos especificar cores por nomes pré-definidos ou valores HEX, RGB, HSL, RGBA, HSLA. Há mais ou menos 140 nomes pré-definidos de cores em HTML que são compatíveis com todos os navegadores (veja: https://www.w3schools.com/colors/colors_names.asp)
+
+ > Cores RGB são cores representadas pela forma "rgb(red, green, blue)". Cada parâmetro (red, green, blue) define a intensidade da cor com valores entre 0 e 255, então há a possibilidade de criar 256*256*256 (16.777.216 milhões) de cores.
+	(exemplos de cores rgb)
+	rgb(255, 0, 0)
+	 > Vermelho puro.
+	
+	rgb(0, 255, 0)
+	 > Verde puro.
+	
+	rgb(0, 0, 255)
+	 > Azul puro.
