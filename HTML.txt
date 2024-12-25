@@ -179,7 +179,7 @@
  > Em HTML podemos especificar cores por nomes pré-definidos ou valores HEX, RGB, HSL, RGBA, HSLA. Há mais ou menos 140 nomes pré-definidos de cores em HTML que são compatíveis com todos os navegadores (veja: https://www.w3schools.com/colors/colors_names.asp)
 
  > Cores RGB são cores representadas pela forma "rgb(red, green, blue)". Cada parâmetro (red, green, blue) define a intensidade da cor com valores entre 0 e 255, então há a possibilidade de criar 256*256*256 (16.777.216 milhões) de cores.
-	(exemplos de cores rgb)
+	(exemplos de cores no padrão RGB)
 	rgb(255, 0, 0)
 	 > Vermelho puro.
 	
@@ -188,3 +188,89 @@
 	
 	rgb(0, 0, 255)
 	 > Azul puro.
+
+	rgb(0, 0, 0)
+	 > Preto
+
+	rgb(255, 255, 255)
+	 > Branco
+
+	rgb(100, 100, 100)
+	 > Tons de cinza (geralmente obtidos com valores iguais nos três parâmetros).
+
+ > Cores RGBA são uma extensão das cores RGB apenas com um canal a mais, o canal alfa (transparência), ele vai de 0.0 a 1.0 onde 0.0 é completamente transparente e 1.0 é sem transparência.
+
+ > Cores HEX são valores de cores em hexadecimal no formado #RRGGBB onde RR (red), GG (green) e BB (blue) são componentes de valores inteiros em hexadecimal  que especificam a intensidade de uma cor. Assim como os valores RGB, os valores hexadecimal são valores entre 00 e FF (0 - 255).
+
+	(exemplos de cores no padrão HEX)
+	#ffffff
+	 > Branco
+
+	#000000
+	 > Preto
+
+	#ff0000
+	 > Vermelho puro
+
+	...
+
+ > Cores HSL são cores especificadas pelos parâmetros "(hue, saturação, luminosidade)". Cores HSLA são uma extensão do padrão HSL mas com um canal de alfa (transparência).
+ > Hue é um grau no círculo de cor que vai de 0 a 360. 0 é vermelho, 120 é verde e 240 é azul.
+ > Saturação é um valor em porcentagem. 0% é um ton de cinza e 100% é a cor cheia. É a intensidade da cor.
+ > Luminosidade é um valor em porcentagem. 0% é preto e 100% é branco. Significa : Quanta luz você quer dar a cor? Se não der nada é preto, se preencher de luz fica tudo branco...
+
+	(tons de cinza usando HSL)
+	hsl(0, 0%, 20%)
+	hsl(0, 0%, 40%)
+	hsl(0, 0%, 60%)
+	 > Tons de cinza podem ser criados apenas ajustando a luminosidade de 0% a 100%.
+
+# Estilos HTML - CSS
+ > CSS significa Cascading Style Sheets (folhas de estilo em cascata). É uma linguagem para controlar o estilo de uma ou múltiplas páginas de uma só vez. Com CSS podemos controlar a cor, fonte, tamanho do texto, espaço entre elementos, como elementos estão posicionados e como são exibidos, qual imagem ou cor de fundo a ser utilizada, como será exibido em diferentes dispositivos e tamanhos de telas e muito mais.
+ > A palavra "cascata" significa que o estilo aplicado a um elemento pai será aplicado também a todos os elementos filhos contidos no elemento pai. Logo, se você aplicar a cor de texto para azul no elemento 'body' todos os cabeçalhos, parágrafos e outros elementos de texto dentro de 'body' irão herdar a mesma cor de texto.
+ > Você pode usar CSS de três maneiras: 'inline' ao usar o atributo 'style' em um elemento HTML específico; 'internal' ao usar o elemento 'style' na área comportamental da pagina (head); 'external' ao usar um elemento 'link' para um arquivo CSS externo.
+
+	(exemplo de 'CSS inline')
+	<p style='color: red;'>A red paragraph.</p>
+	
+	(exemplo de 'CSS internal')
+	...
+	<head>
+	 <style>
+	 p {
+	  color: blue;
+	 }
+	 </style>
+	</head>
+	...
+
+	(exemplo de 'CSS external')
+	...
+	<head>
+	<link rel='stylesheet' href='styles.css'>
+	</head>
+	...
+	 > O estilo externo pode ser escrito em qualquer editor de texto desde que seja salvo com a extensão '.css' e não pode conter nenhum código HTML.
+
+	('CSS external' com link completo)
+	<link rel='stylesheet' href='https://www.w3schools.com/html/styles.css'>
+
+	('CSS external' com link relativo - pastas)
+	<link rel='stylesheet' href='/html/styles.css'>
+
+	('CSS external' com link relativo - mesma pasta)
+	<link rel='stylesheet' href='styles.css'>
+	
+	(bordas em CSS)
+	border: 2px solid red;
+	 > Quase todos os elementos HTML podem conter bordas.
+
+	(padding em CSS)
+	padding: 30px;
+	 > 'padding' é o espaço entre o text e a borda (é o espaço interno do elemento.
+
+	(margin em CSS)
+	margin: 50px;
+	 > 'margin' é o espaço fora da borda (é o espaço externo do elemento).
+
+# 
