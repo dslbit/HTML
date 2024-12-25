@@ -1,0 +1,21 @@
+body {
+	background-color: #000000;
+	color: #f6f6f6;
+}
+
+a {
+	font-family: verdana;
+	text-decoration: none;
+	padding: 10px;
+	border: 2px solid #f6f6f6;
+}
+
+a:link, a:visited {
+	color: lightpink;
+}
+
+a:hover, a:active {
+	background-color: #f6f6f6;
+	color: #000000;
+}
+

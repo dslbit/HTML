@@ -1,7 +1,7 @@
 (Day 1)
 
 # Intro
- > Para começar a criar um website, uma página da internet, é imprescindível entender o que é o HTML, pois ele é a base de toda página da internet. HTML significa Hyper Text Markup Language, ou seja, linguagem de marcação de hiper-texto. É uma padronização, um consenço, e um modo para escrever e marcar (classificar) longas sequências de texto. Sim, uma página da internet é um conglomerado de texto.
+ > Para começar a criar um website, uma página na internet, é imprescindível entender o que é o HTML, pois ele é a base de toda página na internet. HTML significa Hyper Text Markup Language, ou seja, linguagem de marcação de hipertexto. É uma padronização, um consenso, e um modo para escrever e marcar (classificar) longas sequências de texto. Sim, uma página da internet é um conglomerado de texto.
 
  > HTML é uma linguagem de marcação, ou seja, você vai marcar como um determinado conteúdo vai ser interpretado pelo navegador. Ela define elementos que te ajudam a especificar como um determinado conteúdo deve ser interpretado pelo navegador. Então há elementos para especificar apenas um título, parágrafo, imagem e outras coisas.
 
@@ -13,7 +13,7 @@
    (etq. abertura)     (etq. fechamento)
 	 <p>                 </p>
 
- > Todas essas etiquetas tem a estrutura com colchetes ângulares < >, o que muda é a distinção entre a etiqueta de abertura e fechamento, onde a de fechamento contém uma barra antes do identificador da etiqueta. Logo, em uma etiqueta padrão você vai ter o colchete angular de abertura; o identificador da etiqueta; o colchete angular de fechamento; o conteúdo do elemento; e, seguindo o padrão, a etiqueta de fechamento. Vale lembrar que existem elementos que são vazios, isso significa que eles não tem conteúdo e nem etiqueta de fechamento (por exemplo o elemento <br> que define uma quebra de linha no documento).
+ > Todas as etiquetas tem a estrutura com colchetes angulares < >, o que muda é a distinção entre a etiqueta de abertura e fechamento, onde a de fechamento contém uma barra antes do identificador da etiqueta. Logo, em uma etiqueta padrão você vai ter o colchete angular de abertura; o identificador da etiqueta; o colchete angular de fechamento; o conteúdo do elemento; e, seguindo o padrão, a etiqueta de fechamento. Vale lembrar que existem elementos que são vazios, isso significa que eles não tem conteúdo e nem etiqueta de fechamento (por exemplo o elemento <br> que define uma quebra de linha no documento).
 
 	<nome_etiqueta> Conteúdo </nome_etiqueta>
 
@@ -30,18 +30,18 @@
 	</body>
 </html>
 
- > "<!DOCTYPE html>" Informa ao navegador que o documento é um documento HTML5, é um emento que ajuda (ao informar) os navegadores a exibir páginas corretamente. É um elemento que precisa aparecer apenas um vez antes de todo e qualquer elemento.
+ > "<!DOCTYPE html>" Informa ao navegador que o documento é um documento HTML5, é um elemento que ajuda (ao informar) os navegadores a exibir páginas corretamente. É um elemento que precisa aparecer apenas uma vez antes de todo e qualquer elemento.
  > "<html> ... </html>" É o elemento raiz e essencial de um documento HTML.
  > "<head> ... </head>" É o elemento que abrange os elementos semânticos (comportamentais) do documento.
  > "<title> ... </title>" É um elemento comportamental usado para especificar o título da página que vai aparecer na barra do navegador e na aba do navegador.
  > "<body> ... </body>" É o elemento que abrange os elementos visuais do documento.
  > "<h1> ... </h1>" É um elemento visual que define um título de maior importância.
- > "<p> ... </p>" É um emento visual que define um parágrafo.
+ > "<p> ... </p>" É um elemento visual que define um parágrafo.
 
- > HTML não é sensível a caixa alta, isso significa que os elementos <P> e <p> são a mesma coisa, mas a recomendação da W3C é definir os elementos em caixa baixa.
+ > HTML não é sensível à caixa alta, isso significa que os elementos <P> e <p> são a mesma coisa, mas a recomendação da W3C é definir os elementos em caixa baixa.
 
-# Criando uma página HTML
- > Sabendo da estrutura padrão de um documento HTML, ou seja, de uma página da internet, tudo o que você vai precisar para criar uma página HTML é de um navegador e um editor de texto. No caso do Windows, temos o navegador padrão "Edge" e o editor de texto pode ser o simples "bloco de notas". Ao criar o documento de texto só é preciso fazer uma alteração nele ao salvar, ao salvar a extensão do arquivo deve ser ".htm" ou ".html" (são a mesma coisa) invés de ".txt". Uma extensão ".txt" diz ao sistema que o arquivo é um arquivo de texto padrão, por outro lado, uma extensão ".html" informa ao sistema que o arquivo é um documento HTML (normalmente aberto por padrão por navegadores).
+# Criando um documento HTML
+ > Sabendo da estrutura padrão de um documento HTML, ou seja, de uma página da internet, tudo o que você vai precisar para criar uma página HTML é um navegador e um editor de texto. No caso do Windows, temos o navegador padrão e o editor de texto pode ser o simples "bloco de notas". Ao criar o documento de texto só é preciso fazer uma alteração nele ao salvar, isso porque a extensão do arquivo deve ser ".htm" ou ".html" (são a mesma coisa) invés de ".txt". Uma extensão ".txt" diz ao sistema que o arquivo é um arquivo de texto padrão, por outro lado, uma extensão ".html" informa ao sistema que o arquivo é um documento HTML (normalmente aberto por padrão por navegadores).
 
 # Elementos básicos
  > Um elemento é tudo o que estiver contido entre a abertura e o fechamento de uma etiqueta. Elementos podem ser aninhados, ou seja, podemos ter elementos dentro de elementos.
@@ -53,27 +53,27 @@
  > Quebras de linhas em parágrafos com o elemento "<br>".
 	
 	(exemplo de quebra de linha em um parágrafo)
-	<p>This is a<br>paragraph with a line brak.</p>
+	<p>This is a<br>paragraph with a line break.</p>
 
- > Links são definidos pelo elemento "<a href="...">" (significa âncora). "href" é um atributo de um elemento e atributos apenas fornecem ao navegador informações adicionais sobre o elemento. Diferentes elementos tem diferentes atributos.
+ > Links são definidos pelo elemento "<a href="...">" (significa âncora). "href" é um atributo de um elemento e atributos apenas fornecem ao navegador informações adicionais sobre o elemento. Diferentes elementos têm diferentes atributos.
 
 	(exemplo de link)
 	<a href="https://www.google.com"> Google </a>
 
- > Imagens são definidas pelo elemento "<img>" e os atributos desse elemento são "src" que informa a fonte do arquivo da image, "alt" uma descrição ou texto altenativo à imagem caso ela não carregue ou caso o usuário estiver usando um leitor de tela, "width" largura da imagem, "height" altura da imagem.
+ > Imagens são definidas pelo elemento "<img>" e os atributos deste elemento são "src" que informa a fonte do arquivo da image, "alt" uma descrição ou texto alternativo à imagem caso ela não carregue ou caso o usuário estiver usando um leitor de tela, "width" largura da imagem, "height" altura da imagem.
 	
 	(exemplo de imagem)
 	<img src="cat.jpg" alt="A fluffy fat white cat." width="300" height="250">
 
 # Atributos
- > Todo elemento HTML pode contém atributos que são informações adicionais sobre um elemento. Ele sempre deve ser especificado na etiqueta de abertura e é no padrão nome/valor (por exemplo: name="value").
+ > Todo elemento HTML pode conter atributos que são informações adicionais sobre um elemento. Ele sempre deve ser especificado na etiqueta de abertura e é no padrão nome/valor (por exemplo: name="value").
 
  > O atributo "style" é utilizado para adicionar a um elemento cores, font, tamanho, e mais.
 
 	(exemplo do uso do atributo "style")
 	<p style="color: red;">This is a red paragraph.</p>
 
- > O atributo "lang" é utilizado na etiqueta "<html>" e especifica o idioma da página. Ele sempre deve ser especificado, pois ajudam os motores de busca e navegadores na hora de buscar e exibir a página. No atributo "lang" podemos especificar não só o idioma mas também o país, por exemplo "en-US" para Inglês-USA ou "pt-BR" para Português-Brasil. Todos esses códigos de linguagens (HTML language codes) podem sem encontrados no site da W3C (https://www.w3schools.com/tags/ref_language_codes.asp).
+ > O atributo "lang" é utilizado na etiqueta "<html>" e especifica o idioma da página. Ele sempre deve ser especificado, pois ajudam os motores de busca e navegadores na hora de buscar e exibir a página. No atributo "lang" podemos especificar não só o idioma mas também o país, por exemplo "en-US" para Inglês-USA ou "pt-BR" para Português-Brasil. Todos esses códigos de linguagens (HTML language codes) podem ser encontrados no site da W3C (https://www.w3schools.com/tags/ref_language_codes.asp).
 
 	(exemplo do uso do atributo "lang")
 	<html lang="pt"> ... </html>
@@ -83,16 +83,16 @@
 	(exemplo do uso do atributo "title")
 	<p title="I'm a tooltip">This is a paragraph.</p>
 
- > Por convenção a W3C recomenda usar letras minúsculas para atributos. Também recomenda sempre usar áspas (simples ou duplas) para valores de atributos (e caso haja áspas no conteúdo do valor do atributo, use outro tipo de aspa no interior/exterior). A especificação não obriga usar áspas e nem mesmo letras minúsculas, mas é uma recomendação da W3C usar.
+ > Por convenção, a W3C recomenda usar letras minúsculas para atributos. Também recomenda sempre usar aspas (simples ou duplas) para valores de atributos (e caso haja aspas no conteúdo do valor do atributo, use outro tipo de aspa no interior/exterior). A especificação não obriga usar aspas e nem mesmo letras minúsculas, mas é uma recomendação da W3C usar.
 
 (Day 2)
 
 # Cabeçalhos
- > Vão de "<h1>" até "<h6>" onde "<h1>" é o cabeçalho de maior importância, e "<h6>" de menor importância. Por padrão o navegador vai estilizar certas etiquetas, mas é importânte não usar uma etiqueta de cabeçalho mais prioritária apenas para tornar o texto maior, pra isso temos o CSS. As diferentes etiquetas são puramente semântica, isto é, elas servem inteiramente para motores de buscar estruturar melhor seu site na hora de exibir ele em uma busca.
+ > Vão de "<h1>" até "<h6>" onde "<h1>" é o cabeçalho de maior importância, e "<h6>" de menor importância. Por padrão o navegador vai estilizar certas etiquetas, mas é importante não usar uma etiqueta de cabeçalho mais prioritária apenas para tornar o texto maior, para isso temos o CSS. As diferentes etiquetas são puramente semânticas, isto é, elas servem inteiramente para motores de busca estruturar melhor seu site na hora de exibir ele em uma busca.
 
 # Parágrafos
  > Com HTML você não pode mudar a forma como o conteúdo (texto principalmente) é exibido. Por exemplo, você não pode adicionar espaços ou linhas extras em um parágrafo qualquer, todo e qualquer espaço/quebra extra o navegador vai ignorar.
- > A etiqueta "<hr>" (regra horizontal) é um elemento vázio e como regra é utilizado para separar conteúdo, ou quando há uma mudança de conteúdo, (texto).
+ > A etiqueta "<hr>" (regra horizontal) é um elemento vazio e como regra é utilizado para separar conteúdo, ou quando há uma mudança de conteúdo, (texto).
  > A etiqueta "<br>" é um elemento vazio e é usado quando você quer uma nova linha sem iniciar um novo parágrafo.
  > O "problema do poema": Caso queira preservar os espaços e quebras de linhas, você pode utilizar a etiqueta "<pre> ... </pre>" e ele vai preservar a formatação básica que você produzir. Geralmente esse elemento também é estilizado com uma fonte de tamanho fixo (geralmente a Courier).
 
@@ -102,7 +102,7 @@
 	(exemplo da estrutura do atributo style)
 	<tagname style="property:value;">
 
- > "property" é uma propriedade CSS e "value" é um valor CSS (CSS é outro tópico, aqui é apenas uma visão geral para ver que estilos não é reponsabilidade do HTML e sim do CSS que é outro tipo de linguagem que usamos para estilizar um documento HTML.
+ > "property" é uma propriedade CSS e "value" é um valor CSS (CSS é outro tópico, aqui é apenas uma visão geral para ver que estilos não é responsabilidade do HTML e sim do CSS que é outro tipo de linguagem que usamos para estilizar um documento HTML.
 
 	(exemplo de algumas propriedades css)
 	
@@ -135,7 +135,7 @@
 	 > Define parte de um texto em voz alterada ou clima diferente e é renderizado em itálico.
 
 	"<em>...</em>"
-	 > Define um texto de êmfase. Leitores de tela irão pronunciar as palavras dentro dessa etiqueta com êmfase usando tensão verbal.
+	 > Define um texto de ênfase. Leitores de tela irão pronunciar as palavras dentro dessa etiqueta com ênfase usando tensão verbal.
 
 	"<small>...</small>"
 	 > Define um texto pequeno.
@@ -150,10 +150,10 @@
 	 > Define um texto que foi inserido no documento. Geralmente é renderizado com sublinhado.
 
 	"<sub>...</sub>"
-	 > Define um texto subescrito, utilizado geralmente em fórmulas químicas.
+	 > Define um texto subscrito, utilizado geralmente em fórmulas químicas.
 
 	"<sup>...</sup>"
-	 > Define um texto sobescrito, utilizado geralmente em referências de rodapé.
+	 > Define um texto sobrescrito, utilizado geralmente em referências de rodapé.
 
 	"<blockquote cite="fonte.com">...<blockquote>"
 	 > Define uma citação de outra fonte.
@@ -216,8 +216,8 @@
 
  > Cores HSL são cores especificadas pelos parâmetros "(hue, saturação, luminosidade)". Cores HSLA são uma extensão do padrão HSL mas com um canal de alfa (transparência).
  > Hue é um grau no círculo de cor que vai de 0 a 360. 0 é vermelho, 120 é verde e 240 é azul.
- > Saturação é um valor em porcentagem. 0% é um ton de cinza e 100% é a cor cheia. É a intensidade da cor.
- > Luminosidade é um valor em porcentagem. 0% é preto e 100% é branco. Significa : Quanta luz você quer dar a cor? Se não der nada é preto, se preencher de luz fica tudo branco...
+ > Saturação é um valor em porcentagem. 0% é um tom de cinza e 100% é a cor cheia. É a intensidade da cor.
+ > Luminosidade é um valor em porcentagem. 0% é preto e 100% é branco. Significa : Quanta luz você quer dar à cor? Se não der nada é preto, se preencher de luz fica tudo branco...
 
 	(tons de cinza usando HSL)
 	hsl(0, 0%, 20%)
@@ -228,7 +228,7 @@
 # Estilos HTML - CSS
  > CSS significa Cascading Style Sheets (folhas de estilo em cascata). É uma linguagem para controlar o estilo de uma ou múltiplas páginas de uma só vez. Com CSS podemos controlar a cor, fonte, tamanho do texto, espaço entre elementos, como elementos estão posicionados e como são exibidos, qual imagem ou cor de fundo a ser utilizada, como será exibido em diferentes dispositivos e tamanhos de telas e muito mais.
  > A palavra "cascata" significa que o estilo aplicado a um elemento pai será aplicado também a todos os elementos filhos contidos no elemento pai. Logo, se você aplicar a cor de texto para azul no elemento 'body' todos os cabeçalhos, parágrafos e outros elementos de texto dentro de 'body' irão herdar a mesma cor de texto.
- > Você pode usar CSS de três maneiras: 'inline' ao usar o atributo 'style' em um elemento HTML específico; 'internal' ao usar o elemento 'style' na área comportamental da pagina (head); 'external' ao usar um elemento 'link' para um arquivo CSS externo.
+ > Você pode usar CSS de três maneiras: 'inline' ao usar o atributo 'style' em um elemento HTML específico; 'internal' ao usar o elemento 'style' na área comportamental da página (head); 'external' ao usar um elemento 'link' para um arquivo CSS externo.
 
 	(exemplo de 'CSS inline')
 	<p style='color: red;'>A red paragraph.</p>
@@ -267,10 +267,43 @@
 
 	(padding em CSS)
 	padding: 30px;
-	 > 'padding' é o espaço entre o text e a borda (é o espaço interno do elemento.
+	 > 'padding' é o espaço entre o texto e a borda (é o espaço interno do elemento.
 
 	(margin em CSS)
 	margin: 50px;
 	 > 'margin' é o espaço fora da borda (é o espaço externo do elemento).
 
-# 
+
+# HTML Links
+ > Links HTML são hiperlinks, você pode clicar em um link e ir para outro documento. Um link não precisa ser texto, ele poder ser uma imagem ou qualquer outro elemento HTML. A etiqueta '<a href='url' target='' title=''> ... </a>' define um link que irá enviar o leitor para o endereço URL especificado.
+ > Por padrão links que não são visitados são azuis e são sublinhados. Links já visitados são roxos e sublinhados. Um link ativo é sublinhado e vermelho. Mas o estilo deles podem ser alterados com CSS. Os links podem ser relativos ou absolutos (assim como no exemplo acima do CSS).
+ > O atributo 'target' de um link especifica onde o documento de referência será aberto. '_self' abrirá na mesma aba/frame parente do navegador, '_blank' abrirá o documento em uma nova aba, '_parent' abrirá o documento no mesmo quadro pai e '_top' abrira o documento na aba atual.
+
+	(exemplo de imagem como link)
+
+	<a href='default.html' target='_self' title='Home Page'>
+	<img src='image.gif' alt='Home Page Animation'>
+	</a>
+
+	(exemplo de link para um endereço de e-mail)
+	<a href='mailto:test@example.com'>Send Email</a>
+
+	(exemplo de botão como link)
+	<button onclick='document.location="default.html"'>Home Page</button>
+
+ > Para mudar o estilo de um link você pode usar as seguintes propriedades CSS:
+	
+	a:link {}
+	a:visited {}
+	a:hover {}
+	a:active {}
+
+ > É possível inclusive combinar elas:
+
+	a:link, a:visited {}
+	a:hover, a:active {}
+
+ > Além disso é possível criar Marcadores e usar os links para saltar de um ponto para outro em uma página (ou até mesmo para outro documento). Para fazer isso é preciso usar o atributo 'id' para criar um marcador (id='bookmark') e em seguida usar a sintaxe '<a href='#bookmark1>...</a>' para saltar para o marcador definido.
+	
+	(exemplo de link para saltar para um marcador definido em outro documento)
+	<a href='html_demo.html#C4'>Jump to Chapter 4</a>
