@@ -46,11 +46,11 @@
 # Elementos básicos
  > Um elemento é tudo o que estiver contido entre a abertura e o fechamento de uma etiqueta. Elementos podem ser aninhados, ou seja, podemos ter elementos dentro de elementos.
 
- > Os elementos de título "<h1>" seguem até "<h6>", onde "<h1>" informa o título de maior importância e "<h6>" o título de menor importância.
+ > Os elementos de título "<h1>" seguem até "<h6>", onde "<h1>" informa o título de maior importância e "<h6>" o título de menor importância. Essa mudança não é meramente visual, há sentido semântico para os motores de busca também.
 
  > Parágrafos de texto são definidos pelo elemento "<p>".
 
- > Quebras de linhas em parágrafos com o elemento "<br>".
+ > Quebras de linhas em parágrafos são definidos pelo elemento "<br>".
 	
 	(exemplo de quebra de linha em um parágrafo)
 	<p>This is a<br>paragraph with a line break.</p>
@@ -60,20 +60,20 @@
 	(exemplo de link)
 	<a href="https://www.google.com"> Google </a>
 
- > Imagens são definidas pelo elemento "<img>" e os atributos deste elemento são "src" que informa a fonte do arquivo da image, "alt" uma descrição ou texto alternativo à imagem caso ela não carregue ou caso o usuário estiver usando um leitor de tela, "width" largura da imagem, "height" altura da imagem.
+ > Imagens são definidas pelo elemento "<img>" e os atributos deste elemento são "src" que informa a fonte do arquivo da imagem, "alt" uma descrição ou texto alternativo à imagem caso ela não carregue ou caso o usuário estiver usando um leitor de tela, "width" largura da imagem, "height" altura da imagem.
 	
-	(exemplo de imagem)
+	(exemplo da etiqueta de imagem)
 	<img src="cat.jpg" alt="A fluffy fat white cat." width="300" height="250">
 
 # Atributos
  > Todo elemento HTML pode conter atributos que são informações adicionais sobre um elemento. Ele sempre deve ser especificado na etiqueta de abertura e é no padrão nome/valor (por exemplo: name="value").
 
- > O atributo "style" é utilizado para adicionar a um elemento cores, font, tamanho, e mais.
+ > O atributo "style" é utilizado para adicionar a um elemento cores, font, tamanho, e outros.
 
 	(exemplo do uso do atributo "style")
 	<p style="color: red;">This is a red paragraph.</p>
 
- > O atributo "lang" é utilizado na etiqueta "<html>" e especifica o idioma da página. Ele sempre deve ser especificado, pois ajudam os motores de busca e navegadores na hora de buscar e exibir a página. No atributo "lang" podemos especificar não só o idioma mas também o país, por exemplo "en-US" para Inglês-USA ou "pt-BR" para Português-Brasil. Todos esses códigos de linguagens (HTML language codes) podem ser encontrados no site da W3C (https://www.w3schools.com/tags/ref_language_codes.asp).
+ > O atributo "lang" é utilizado na etiqueta "<html>" e especifica o idioma da página. Ele sempre deve ser especificado, pois ajudam os motores de busca e navegadores na hora de buscar e exibir a página. No atributo "lang" podemos especificar não só o idioma mas também o país, por exemplo "en-US" para Inglês-USA ou "pt-BR" para Português-Brasil. Todos esses códigos de linguagem (HTML language codes) podem ser encontrados no site da W3C (https://www.w3schools.com/tags/ref_language_codes.asp).
 
 	(exemplo do uso do atributo "lang")
 	<html lang="pt"> ... </html>
@@ -88,13 +88,13 @@
 (Day 2)
 
 # Cabeçalhos
- > Vão de "<h1>" até "<h6>" onde "<h1>" é o cabeçalho de maior importância, e "<h6>" de menor importância. Por padrão o navegador vai estilizar certas etiquetas, mas é importante não usar uma etiqueta de cabeçalho mais prioritária apenas para tornar o texto maior, para isso temos o CSS. As diferentes etiquetas são puramente semânticas, isto é, elas servem inteiramente para motores de busca estruturar melhor seu site na hora de exibir ele em uma busca.
+ > Vão de "<h1>" até "<h6>" onde "<h1>" é o cabeçalho de maior importância, e "<h6>" de menor importância. Por padrão o navegador vai dar estilo a certas etiquetas, mas é importante não usar uma etiqueta de cabeçalho mais prioritária apenas para tornar o texto maior, para isso temos o CSS (que é outro assunto). As diferentes etiquetas são puramente semânticas, isto é, elas servem inteiramente para motores de busca estruturar melhor seu site na hora de exibir ele em uma busca.
 
 # Parágrafos
  > Com HTML você não pode mudar a forma como o conteúdo (texto principalmente) é exibido. Por exemplo, você não pode adicionar espaços ou linhas extras em um parágrafo qualquer, todo e qualquer espaço/quebra extra o navegador vai ignorar.
- > A etiqueta "<hr>" (regra horizontal) é um elemento vazio e como regra é utilizado para separar conteúdo, ou quando há uma mudança de conteúdo, (texto).
- > A etiqueta "<br>" é um elemento vazio e é usado quando você quer uma nova linha sem iniciar um novo parágrafo.
- > O "problema do poema": Caso queira preservar os espaços e quebras de linhas, você pode utilizar a etiqueta "<pre> ... </pre>" e ele vai preservar a formatação básica que você produzir. Geralmente esse elemento também é estilizado com uma fonte de tamanho fixo (geralmente a Courier).
+ > A etiqueta "<hr>" (regra horizontal) é um elemento vazio e por via de regra é utilizado para separar conteúdos distintos (sem relação).
+ > A etiqueta "<br>" é um elemento vazio e é usado quando você quer saltar para uma nova linha sem iniciar um novo parágrafo.
+ > O "problema do poema": Caso queira preservar os espaços e quebras de linhas, você pode utilizar a etiqueta "<pre> ... </pre>" e ela vai preservar a formatação básica que você produzir. Geralmente esse elemento também é estilizado com uma fonte de tamanho fixo (geralmente a Courier).
 
 # Estilos
  > Você pode mudar o estilo de um elemento com o atributo "style".
@@ -141,7 +141,7 @@
 	 > Define um texto pequeno.
 	
 	"<mark>...</mark>"
-	 > Define um texto que deve ser realçado
+	 > Define um texto que deve ser realçado.
 
 	"<del>...</del>"
 	 > Define um texto que foi apagado/removido de um documento. Geralmente é renderizado com uma linha atravessando a palavra.
@@ -275,9 +275,9 @@
 
 
 # HTML Links
- > Links HTML são hiperlinks, você pode clicar em um link e ir para outro documento. Um link não precisa ser texto, ele poder ser uma imagem ou qualquer outro elemento HTML. A etiqueta '<a href='url' target='' title=''> ... </a>' define um link que irá enviar o leitor para o endereço URL especificado.
+ > Links HTML são hiperlinks, você pode clicar em um link e ir para outro documento. Um link não precisa ser texto, ele pode ser uma imagem ou qualquer outro elemento HTML. A etiqueta '<a href='url' target='' title=''> ... </a>' define um link que irá enviar o leitor para o endereço URL especificado.
  > Por padrão links que não são visitados são azuis e são sublinhados. Links já visitados são roxos e sublinhados. Um link ativo é sublinhado e vermelho. Mas o estilo deles podem ser alterados com CSS. Os links podem ser relativos ou absolutos (assim como no exemplo acima do CSS).
- > O atributo 'target' de um link especifica onde o documento de referência será aberto. '_self' abrirá na mesma aba/frame parente do navegador, '_blank' abrirá o documento em uma nova aba, '_parent' abrirá o documento no mesmo quadro pai e '_top' abrira o documento na aba atual.
+ > O atributo 'target' de um link especifica onde o documento de referência será aberto. '_self' abrirá na mesma aba/frame parente do navegador, '_blank' abrirá o documento em uma nova aba, '_parent' abrirá o documento no mesmo quadro pai e '_top' abrirá o documento na aba atual.
 
 	(exemplo de imagem como link)
 
@@ -291,6 +291,10 @@
 	(exemplo de botão como link)
 	<button onclick='document.location="default.html"'>Home Page</button>
 
+	(exemplo de link em frames)
+	<a href='...' target='my_iframe'>...</a>
+	<iframe src='test.html' width='100%' name='my_iframe'></iframe>
+
  > Para mudar o estilo de um link você pode usar as seguintes propriedades CSS:
 	
 	a:link {}
@@ -303,7 +307,88 @@
 	a:link, a:visited {}
 	a:hover, a:active {}
 
- > Além disso é possível criar Marcadores e usar os links para saltar de um ponto para outro em uma página (ou até mesmo para outro documento). Para fazer isso é preciso usar o atributo 'id' para criar um marcador (id='bookmark') e em seguida usar a sintaxe '<a href='#bookmark1>...</a>' para saltar para o marcador definido.
+ > Além disso, é possível criar Marcadores e usar os links para saltar de um ponto para outro em uma página (ou até mesmo para outro documento). Para fazer isso é preciso usar o atributo 'id' para criar um marcador (id='bookmark') e em seguida usar a sintaxe '<a href='#bookmark1>...</a>' para saltar para o marcador definido.
 	
 	(exemplo de link para saltar para um marcador definido em outro documento)
 	<a href='html_demo.html#C4'>Jump to Chapter 4</a>
+
+# Imagens HTML
+ > Imagens podem ser inseridas em um documento HTML com a etiqueta '<img>' como já visto anteriormente. Em uma imagem o atributo 'src' define o endereço (relativo ou absoluto) de uma imagem, o atributo 'alt' define um texto alternativo à imagem caso o usuário esteja usando um leitor de tela ou caso a exibição da imagem for corrompida e os atributos 'width' e 'height' são indispensáveis. É recomendável utilizar os parâmetros de largura e altura da imagem em CSS invés de atributos no HTML, pois dessa forma estilo algum posteriormente pode alterar por acidente o tamanho dessa imagem.
+
+	(exemplo de imagem flutuando ao lado de um parágrafo)
+	<p>
+	 <img src='smiley.gif' alt='Smiley face' style='float:right; width:42px; height:42px;'>
+	The image will float to the right of the text.
+	</p>
+
+ > Você pode criar imagens mapeadas com os elementos: 'img' e o atributo 'usemap="#mapid"'; 'map' e o atributo 'name="mapid"' e os elementos 'area' com os atributos 'shape', 'coords', 'alt' e 'href'.
+
+	(exemplo de imagem mapeada contendo um computador e ao clicar no computador o navegador vai retornar uma mensagem específica além de carregar uma nova página)
+	<img src='workplace.jpg' alt='Workplace' usemap='#workmap'>
+	<map name='workmap'>
+	 <area shape='rect' coords='34, 44, 270, 350' alt='Computer' href='computer.html' onclick='myFunction()'>
+	</map>
+
+	<script>
+	 function myFunction() {
+	  alert('You clicked the computer.');
+	 }
+	</script>
+
+ > Imagens também servem de fundo para quase todos os tipos de elementos e são definidas pela propriedade 'background-image: url('');' em CSS.
+
+	(exemplo de atributos CSS para imagens como plano de fundo)
+	background-image: url('example.jpg');
+	 > Especifica o endereço da imagem para colocar de plano de fundo para o elemento.
+	background-repeat: no-repeat;
+	 > Define se a imagem vai se repetir no elemento.
+	background-size: cover;
+	 > Define o tamanho da imagem de plano de fundo. 'cover' preenche o elemento. Valores como '100% 100%' preenchem e esticam a imagem.
+	background-attachment: fixed;
+	 > Previne a imagem de esticar.
+	
+ > O elemento 'picture' pode definir diversas imagens dependendo do dispositivo do usuário que estiver vendo a página.
+	
+	(exemplo do uso do elemento 'picture')
+	<picture>
+	 <source media='(min-width: 650px)' srcset='img_food_normal.jpg'>
+	 <source media='(min-width: 465px)' srcset='img_food_small.jpg'>
+	 <img src='img_food_normal'>
+	</picture>
+	 > No exemplo acima o navegador vai exibir a condição que satisfaz primeiro em relação ao tamanho do dispositivo, caso nenhum funcione o elemento 'img' vai satisfazer a exibição da imagem. Esse elemento é muito útil quando for necessário exibir a imagem correta para um tamanho específico de dispositivo ou quando não for necessário mostrar um arquivo tão pesado para um dispositivo tão pequeno. Diversos elementos 'source' também podem ser usados com diversos formatos específicos para aumentar compatibilidade com navegadores e o navegador vai executar apenas o primeiro que funcionar e ignorar o resto.
+
+(Day 4)
+
+# Favicon
+ > Use uma etiqueta '<link>' para inserir um 'favicon'na página. O 'favicon' é uma imagem que é exibida ao lado do título da página na aba do navegador. Para inserir ele é preciso usar a seguinte sintaxe da etiqueta '<link>' na área comportamental do documento HTML (head):
+
+	<link rel='icon' type='image/x-icon' href='images/facicon.ico'>
+
+ > A maioria dos navegadores suportam vários tipos de extensão para atuar como um 'favicon', as extensões '.ico', '.png', '.gif', '.jpeg' e '.svg' estão entre elas.
+
+# Page Title
+ > O elemento '<title> ... </title>' que é definido na área comportamental do site (head) é de extrema importância para motores de busca (google, duckduckgo, bing etc.) e para otimização de motores de busca (SEO - Para melhorar a posição do seu site nas pesquisas). Um bom título descreve o conteúdo e o significado da página, então tente ser o mais preciso e significativo possível.
+
+# Tabelas HTML
+ > As tabelas permitem organizar dados em linhas e colunas. Para iniciar a definição de uma tabela usamos o elemento '<table> ... </table>'.
+ > O elemento '<caption> ... </caption>' define uma legenda para a tabela e deve ser inserido imediatamente após o elemento 'table'.
+ > O elemento '<thead> ... </thead>' é um elemento semântico que agrupa o cabeçalho de uma tabela.
+ > O elemento '<tbody> ... </tbody>' é um elemento semântico que agrupa o corpo/dados da tabela.
+ > O elemento '<tfoot> ... </tfoot>' é um elemento semântico que agrupa o conteúdo de rodapé da tabela.
+ > O elemento '<tr> ... </tr>' define uma nova linha.
+ > O elemento '<th> ... </th>' define uma célula de cabeçalho (coluna) para a tabela. Para usar cada nova linha como um cabeçalho (lateral) define um elemento 'th' antes de cada elemento 'td' na tabela.
+ > O elemento '<td> ... </td>' define uma célula (coluna) para a tabela.
+ > O atributo "colspan='x'" faz com que uma célula tome x colunas.
+ > O atributo "rowspan='x'" faz com que uma célula tome x linhas.
+
+	tr = table row
+	th = table header
+	td = table data
+
+ > A propriedade CSS 'border' pode ser usada nos elementos "table, th e td" para adicionar bordas aos elementos.
+ > A propriedade CSS 'border-collapse' com o valor 'collapse' não duplica as bordas dos elementos na tabela.
+ > As propriedades CSS 'background-color', 'border-radius', 'border-style' e 'border-color' podem ser usadas para dar estilo às bordas da tabela.
+ > As propriedades CSS 'width' e 'height' podem ser usadas (px, % etc.) para definir o tamanho de linhas ou colunas específicas em uma tabela
+ > A propriedade CSS 'text-align' pode ser útil para ajustar o alinhamento de texto nas tabelas (principalmente de cabeçalhos).
+ > A propriedade CSS 'padding' pode ser usadas nas células 'th/td' para adicionar espaço interno nas células. É possível também usar espaçamento individual em uma direção só com as propriedades 'padding-top', 'padding-right', 'padding-bottom' e 'padding-left'.
+ > A propriedade CSS 'border-spacing' pode ser usada para criar espaço entre cada célula.
