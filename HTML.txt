@@ -372,6 +372,7 @@
 # Tabelas HTML
  > As tabelas permitem organizar dados em linhas e colunas. Para iniciar a definição de uma tabela usamos o elemento '<table> ... </table>'.
  > O elemento '<caption> ... </caption>' define uma legenda para a tabela e deve ser inserido imediatamente após o elemento 'table'.
+ > O elemento 'colgroup' pode ser usado para dar estilo a um conjunto de linhas e colunas, mas suas propriedades são bem limitadas. Ele deve estar contido em 'table', logo após 'caption' (se houver) e fora de qualquer outro elemento.
  > O elemento '<thead> ... </thead>' é um elemento semântico que agrupa o cabeçalho de uma tabela.
  > O elemento '<tbody> ... </tbody>' é um elemento semântico que agrupa o corpo/dados da tabela.
  > O elemento '<tfoot> ... </tfoot>' é um elemento semântico que agrupa o conteúdo de rodapé da tabela.
@@ -392,3 +393,5 @@
  > A propriedade CSS 'text-align' pode ser útil para ajustar o alinhamento de texto nas tabelas (principalmente de cabeçalhos).
  > A propriedade CSS 'padding' pode ser usadas nas células 'th/td' para adicionar espaço interno nas células. É possível também usar espaçamento individual em uma direção só com as propriedades 'padding-top', 'padding-right', 'padding-bottom' e 'padding-left'.
  > A propriedade CSS 'border-spacing' pode ser usada para criar espaço entre cada célula.
+ > Você pode combinar a propriedade CSS 'background-color' com o seletor ':nth-child(even)' em 'tr' para causar um efeito zebra (alternado) na cor das linhas da tabela. Dá pra combinar esse seletor e invés de mudar primeiro o elemento par, mudar o ímpar (odd) ou até mesmo combinar a aplicação em colunas e linhas invés de apenas linhas.
+ > A propriedade CSS 'visibility: collapse;' pode ser usada em um 'colgroup>col' para esconder uma determinada coluna.

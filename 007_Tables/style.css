@@ -1,0 +1,29 @@
+body {
+	background-color: #2b2b2b;
+	color: #f6f6f6;
+}
+
+table caption {
+	font-size: 150%;
+	padding: 15px;
+}
+
+table, tr, th, td {
+	border: 1px solid #c6c6c6;
+	border-radius: 2px;
+	padding: 5px 15px;
+	border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+	background-color: hsla(0, 0%, 40%, 0.75);
+}
+
+tr:hover {
+	background-color: #f6f6f6;
+	color: #2b2b2b;
+}
+
+tfoot {
+	text-align: center;
+}
