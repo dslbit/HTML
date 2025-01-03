@@ -395,3 +395,46 @@
  > A propriedade CSS 'border-spacing' pode ser usada para criar espaço entre cada célula.
  > Você pode combinar a propriedade CSS 'background-color' com o seletor ':nth-child(even)' em 'tr' para causar um efeito zebra (alternado) na cor das linhas da tabela. Dá pra combinar esse seletor e invés de mudar primeiro o elemento par, mudar o ímpar (odd) ou até mesmo combinar a aplicação em colunas e linhas invés de apenas linhas.
  > A propriedade CSS 'visibility: collapse;' pode ser usada em um 'colgroup>col' para esconder uma determinada coluna.
+
+	(exemplo de uma tabela padrão)
+	<table>
+		<caption>Companies</caption>
+		<tr>
+			<th>Company</th>
+			<th>Contact</th>
+			<th>Country</th>
+		</tr>
+		<tr>
+			<td>Alfreds</td>
+			<td>Maria</td>
+			<td>Germany</td>
+		</tr>
+		<tr>
+			<td>Centro Comercial</td>
+			<td>Francisco Chang</td>
+			<td>Mexico</td>
+		</tr>
+	</table>
+
+(Day 5)
+
+# Listas HTML
+ > Listas são utilizadas para agrupar itens relacionados.
+ > Listas não ordenadas são definidas pelo elemento '<ul> ... </ul>' (unordered list) e cada item é definido pelo elemento '<li> ... </li>' (list item). Por padrão tem bolinhas petra no início de cada item como estilo.
+ > O estilo padrão da lista não ordenada pode ser alterado com CSS utilizando a propriedade 'list-style-type' com os valores 'disc', 'circle', 'square', 'none'.
+ > Um elemento '<li> ... </li>' pode conter outras listas e outros elementos HTML como imagens, links etc.
+	(exemplo de listas não ordenadas aninhadas)
+	<ul>
+		<li>Coffee</li>
+		<li>Tea
+			<ul>
+				<li>Black tea</li>
+				<li>Green tea</li>
+			</ul>
+		</li>
+	</ul>
+	
+ > Listas ordenadas são definidas pelo elemento '<ol> ... </ol>' (ordered list) e cada item é definido pelo elemento '<li> ... </li>'. Por padrão há uma enumeração no início de cada item como estilo.
+ > O estilo das listas ordenadas podem ser alterado, da mesma forma que as lista não ordenadas usando a propriedade CSS com os valores 'upper-alpha', 'upper-roman' etc. mas também é possível com um atributo invés da propriedade CSS, o atributo "type=''" com os valores '1', 'A', 'a', 'I', 'i'. Há outro parâmetro também chamado "start=''" que especifica em qual índice ou número começar a contagem da lista.
+ > Lista de descrição são definidas pelo elemento '<dl> ... </dl>' (description list) e ela define um termo '<dt> ... </dt>' e o significado daquele termo '<dd> ... </dd>'.
+
