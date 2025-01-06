@@ -489,4 +489,16 @@
 # O atributo 'id'
  > É utilizado para dar um ID único para um elemento HTML. Ele é sensível à CAIXA ALTA. Precisa começar com uma letra e não pode conter espaços no nome. Esse identificador (nome) precisa ser único no documento HTML. Um 'id' pode ser usado para dar um estilo único a um elemento, para manipular um elemento único com JavaScript (com 'getElementById') ou pode ser usado também como um marcador para saltar a página para um ponto específico no documento.
 
+# Iframes em HTML
+ > 'Iframes' são elementos de 'nível inline' e são utilizados para exibir uma página dentro de uma página.
+
+	(exemplo da sintaxe básica do elemento 'iframe')
+	<iframe src='url' title='description'></iframe>
+
+ > É sempre bom incluir o atributo 'title' nesse elemento pois ele auxilia leitores de tela a informar qual é o tipo de contúdo que está sendo mostrado para o usuário.
+ > Você pode alterar a largura, altura e borda do iframe usando as propriedades CSS 'width', 'height' e 'border'. É possível também definir um atributo chamado 'name' e usar ele como 'target' em um elemento '<a>' (âncora) para carregar uma página específica no próprio 'iframe' invés de uma nova aba.
+	
+	(exemplo do uso do atributo 'name')
+	<iframe src='demo_iframe.html' name='iframe_id1' title='The Google's Page - The most famous search engine out there used to search for any web page on the web.'></iframe>
+	<p><a href='https://www.google.com' target='iframe_id1'>Google's page</a></p>
 
