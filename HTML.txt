@@ -94,7 +94,7 @@
  > Com HTML você não pode mudar a forma como o conteúdo (texto principalmente) é exibido. Por exemplo, você não pode adicionar espaços ou linhas extras em um parágrafo qualquer, todo e qualquer espaço/quebra extra o navegador vai ignorar.
  > A etiqueta "<hr>" (regra horizontal) é um elemento vazio e por via de regra é utilizado para separar conteúdos distintos (sem relação).
  > A etiqueta "<br>" é um elemento vazio e é usado quando você quer saltar para uma nova linha sem iniciar um novo parágrafo.
- > O "problema do poema": Caso queira preservar os espaços e quebras de linhas, você pode utilizar a etiqueta "<pre> ... </pre>" e ela vai preservar a formatação básica que você produzir. Geralmente esse elemento também é estilizado com uma fonte de tamanho fixo (geralmente a Courier).
+ > O "problema do poema": Caso queira preservar os espaços e quebras de linhas, você pode utilizar a etiqueta "<pre> ... </pre>" e ela vai preservar a formatação básica que você produzir. Geralmente esse elemento também recebe estilo com uma fonte de tamanho fixo (geralmente a Courier).
 
 # Estilos
  > Você pode mudar o estilo de um elemento com o atributo "style".
@@ -102,7 +102,7 @@
 	(exemplo da estrutura do atributo style)
 	<tagname style="property:value;">
 
- > "property" é uma propriedade CSS e "value" é um valor CSS (CSS é outro tópico, aqui é apenas uma visão geral para ver que estilos não é responsabilidade do HTML e sim do CSS que é outro tipo de linguagem que usamos para estilizar um documento HTML.
+ > "property" é uma propriedade CSS e "value" é um valor CSS (CSS é outro tópico, aqui é apenas uma visão geral para ver que estilos não é responsabilidade do HTML e sim do CSS que é outro tipo de linguagem que usamos para dar estilo para documento HTML.
 
 	(exemplo de algumas propriedades css)
 	
@@ -217,7 +217,7 @@
  > Cores HSL são cores especificadas pelos parâmetros "(hue, saturação, luminosidade)". Cores HSLA são uma extensão do padrão HSL mas com um canal de alfa (transparência).
  > Hue é um grau no círculo de cor que vai de 0 a 360. 0 é vermelho, 120 é verde e 240 é azul.
  > Saturação é um valor em porcentagem. 0% é um tom de cinza e 100% é a cor cheia. É a intensidade da cor.
- > Luminosidade é um valor em porcentagem. 0% é preto e 100% é branco. Significa : Quanta luz você quer dar à cor? Se não der nada é preto, se preencher de luz fica tudo branco...
+ > Luminosidade é um valor em porcentagem. 0% é preto e 100% é branco. Significa : Quanta luz você quer dar à cor? Se não der nada fica preto, se preencher de luz fica tudo branco...
 
 	(tons de cinza usando HSL)
 	hsl(0, 0%, 20%)
@@ -391,7 +391,7 @@
  > As propriedades CSS 'background-color', 'border-radius', 'border-style' e 'border-color' podem ser usadas para dar estilo às bordas da tabela.
  > As propriedades CSS 'width' e 'height' podem ser usadas (px, % etc.) para definir o tamanho de linhas ou colunas específicas em uma tabela
  > A propriedade CSS 'text-align' pode ser útil para ajustar o alinhamento de texto nas tabelas (principalmente de cabeçalhos).
- > A propriedade CSS 'padding' pode ser usadas nas células 'th/td' para adicionar espaço interno nas células. É possível também usar espaçamento individual em uma direção só com as propriedades 'padding-top', 'padding-right', 'padding-bottom' e 'padding-left'.
+ > A propriedade CSS 'padding' pode ser usada nas células 'th/td' para adicionar espaço interno nas células. É possível também usar espaçamento individual em uma direção só com as propriedades 'padding-top', 'padding-right', 'padding-bottom' e 'padding-left'.
  > A propriedade CSS 'border-spacing' pode ser usada para criar espaço entre cada célula.
  > Você pode combinar a propriedade CSS 'background-color' com o seletor ':nth-child(even)' em 'tr' para causar um efeito zebra (alternado) na cor das linhas da tabela. Dá pra combinar esse seletor e invés de mudar primeiro o elemento par, mudar o ímpar (odd) ou até mesmo combinar a aplicação em colunas e linhas invés de apenas linhas.
  > A propriedade CSS 'visibility: collapse;' pode ser usada em um 'colgroup>col' para esconder uma determinada coluna.
@@ -420,7 +420,7 @@
 
 # Listas HTML
  > Listas são utilizadas para agrupar itens relacionados.
- > Listas não ordenadas são definidas pelo elemento '<ul> ... </ul>' (unordered list) e cada item é definido pelo elemento '<li> ... </li>' (list item). Por padrão tem bolinhas petra no início de cada item como estilo.
+ > Listas não ordenadas são definidas pelo elemento '<ul> ... </ul>' (unordered list) e cada item é definido pelo elemento '<li> ... </li>' (list item). Por padrão tem bolinhas pretas no início de cada item como estilo.
  > O estilo padrão da lista não ordenada pode ser alterado com CSS utilizando a propriedade 'list-style-type' com os valores 'disc', 'circle', 'square', 'none'.
  > Um elemento '<li> ... </li>' pode conter outras listas e outros elementos HTML como imagens, links etc.
 	(exemplo de listas não ordenadas aninhadas)
@@ -437,4 +437,56 @@
  > Listas ordenadas são definidas pelo elemento '<ol> ... </ol>' (ordered list) e cada item é definido pelo elemento '<li> ... </li>'. Por padrão há uma enumeração no início de cada item como estilo.
  > O estilo das listas ordenadas podem ser alterado, da mesma forma que as lista não ordenadas usando a propriedade CSS com os valores 'upper-alpha', 'upper-roman' etc. mas também é possível com um atributo invés da propriedade CSS, o atributo "type=''" com os valores '1', 'A', 'a', 'I', 'i'. Há outro parâmetro também chamado "start=''" que especifica em qual índice ou número começar a contagem da lista.
  > Lista de descrição são definidas pelo elemento '<dl> ... </dl>' (description list) e ela define um termo '<dt> ... </dt>' e o significado daquele termo '<dd> ... </dd>'.
+
+ > Listas ordenadas mostram uma sequência enquanto as listas não ordenadas simplesmente representam itens sem implicação de ordem.
+ > Além de ajudarem a organizar o conteúdo de uma página, as listas melhoram a legibilidade da página, melhoram a acessibilidade e podem receber um estilo diferente através do CSS. Além disso, as listas ajudam motores de busca a entender melhor a estrutura da sua página facilitando a exibição das informações e facilitando a navegação.
+ > Listas não ordenadas enfatizam itens igualmente diferentes de uma lista ordenada.
+
+# Elementos "block" e "inline"
+ > Elementos que são definidos como 'block', por padrão, sempre começam em uma nova linha e tomam toda a largura 'width' do documento. Exemplos desses elementos são os elementos 'p' e 'div'.
+	(exemplo de elementos 'block' em HTML)
+	<address> <article> <aside> <blockquote> <canvas> <dd> <div> <dl> <dt> <fieldset> <figcaption> <figure> <footer> <form> <h1>-<h6> <header> <hr> <li> <main> <nav> <noscript> <ol> <p> <pre> <section> <table> <tfoot> <ul> <video>
+
+ > Elementos que são definidos como 'inline', por padrão, apenas tomam a largura necessária. Por exemplo o elemento '<span> ... </span>'. E é importante saber que _um 'elemento inline' não pode conter um 'elemento block'_.
+	(exemplo de elementos 'inline' em HTML)
+	<a> <abbr> <acronym> <b> <bdo> <big> <br> <button> <cite> <code> <dfn> <em> <i> <img> <input> <kbd> <label> <map> <object> <output> <q> <samp> <script> <select> <small> <span> <strong> <sub> <sup> <textarea> <time> <tt> <var>
+
+ > O elemento 'div' é um elemento de nova linha, geralmente é usado como um container para outros elementos HTML. Ele não necessita de atributos, mas é comum usar atributos como 'style', 'class' e 'id'. Quando utilizado em conjunto com CSS, o elemento 'div' pode ser usado para dar estilo a blocos de conteúdo. Por padrão a largura do elemento 'div' vai ser a largura disponível do elemento pai, se o elemento pai for 'body' ele vai tomar todo o espaço da página de acordo com a janela do navegador.
+
+ > O elemento 'span' é um elemento de linha, geralmente é usado para marcar partes de texto ou partes do documento HTML. Da mesma forma que o elemento 'div', não necessita de atributos mas é comum usar atributos como 'style', 'class', e 'id'. Quando utilizado em conjunto com CSS, o elemento 'span' pode ser usado para dar estilo a partes de texto ou partes do documento.
+
+# Alinhando uma 'div'
+ > Para centralizar o texto de uma 'div' usa-se a propriedade 'text-align' com o valor 'center', mas para centralizar uma 'div' é preciso especificar uma largura através da propriedade 'width' e utilizar a propriedade 'margin' com o valor 'auto' para os valores 'left' e 'right'.
+ > Você pode ter aninhados quantos elementos 'div' quiser. Por padrão eles são alinhados verticalmente, mas há alguns métodos para alinhar eles horizontalmente.
+   1. O primeiro que pode ser considerado é a propriedade 'float' com o valor 'left'. Então, em um conjunto de containers 'div' eu posso definir que todos os elementos 'div' filho do container pai recebe a propriedade de largura 'width' e um 'float' com valor 'left' (apesar desse não ser o uso ideal da propriedade 'float' é uma solução para o alinhamento horizontal de containers do tipo 'block').
+   2. Outra forma (mais correta do que usar 'float') é usar a propriedade 'display' com o valor 'inline-block' (sempre junto com a propriedade 'width' para limitar o tamanho do container). Dessa forma o elemento passa a ser um elemento de 'nível inline' invés de um elemento de 'nível block'.
+   3. De forma mais estável podemos fazer esse alinhamento usando o 'Módulo de Estrutura Flexbox do CSS'. Ele foi criado para facilitar estruturas de design responsivo sem precisar usar 'float' ou posicionamento. Em um container pai aplicamos com a propriedade 'display' o valor 'flex' e para os elementos filhos apenas definimos a largura deles com a propriedade 'width'. Para facilitar essa aplicação da largura para os elementos filhos podemos usar o seletor '>' no CSS, que pega os filhos direto de um elemento pai. O uso desse seletor vai ficar mais claro após os exemplos do uso das propriedades 'class' e 'id'.
+   4. Seguindo um padrão de estruturas de design responsivo, temos uma outra opção ao Flexbox, podemos usar o 'Módulo de Estrutura Grid do CSS'. Ele pode parecer parecido com o Flexbox por não precisar usar 'float' ou posicionamento, mas ao contrário do Flexbox o CSS Grid permite definir mais de uma linha e posicioná-las individualmente. Em um container pai aplicamos com a propriedade 'display' o valor 'grid' e, no mesmo elemento pai, especificamos o tamanho de cada coluna com a propriedade 'grid-template-columns' com os valores variáveis de quantas colunas queremos com os respectivos tamanhos (por exemplo: 'grid-template-columns: 33% 33% 33%', para 3 colunas de mesmo tamanho).
+
+# O atributo 'class'
+ > É utilizado para identificar múltiplos elementos HTML para dar estilos em comum usando CSS ou para aplicar um comportamento personalizado usando Javascript (com 'getElementsByClassName'). Qualquer elemento pode receber uma classe. Um elemento pode ter várias classes (separadas por um simples espaço em branco) e para se referir a uma classe em CSS usamos a sintaxe '.class-name' e vale lembrar que o nome definido para a classe é sensível a 'CAIXA ALTA'. Diferentes tipos de elementos podem compartilhar a mesma classe (por exemplo, você pode usar uma classe em um elemento 'h2' e um elemento 'p').
+
+	(exemplo do uso das propriedades 'class')
+	(no HTML)
+	<h2 class='city main'>São Paulo</h2>
+	<h2 class='city'>Rio de Janeiro</h2>
+	<h2 class='city'>Bahia</h2>
+	(no CSS)
+	.city {
+	  background-color: tomato;
+	  color: white;
+	  padding: 10px;
+	}
+	. main {
+	  background-color: #2b2b2b;
+	}
+
+	(exemplo do uso do seletor '>' em CSS)
+	.my-container > div {
+	  width: 33%;
+	}
+
+# O atributo 'id'
+ > É utilizado para dar um ID único para um elemento HTML. Ele é sensível à CAIXA ALTA. Precisa começar com uma letra e não pode conter espaços no nome. Esse identificador (nome) precisa ser único no documento HTML. Um 'id' pode ser usado para dar um estilo único a um elemento, para manipular um elemento único com JavaScript (com 'getElementById') ou pode ser usado também como um marcador para saltar a página para um ponto específico no documento.
+
 
