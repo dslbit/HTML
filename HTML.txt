@@ -553,7 +553,67 @@
 
  > Junto com esses elementos e o conhecimento até aqui, é possível criar disposição de multi-colunas com diferentes técnicas: usando a propriedade float e clear do CSS; usando Flexbox do CSS; usando Grid do CSS ou usando um framework como, por exemplo, o Bootstrap.
 
+# Web Design responsivo
+ > Web Design responsivo ou, em minhas palavras, o processo de planejamento e criação de páginas para internet responsivo é sobre criar páginas web que ficam boas em qualquer dispositivo. Um design responsivo vai ajustar automaticamente dependendo do tamanho do dispositivo (ou janela) e dimensões. Mais especificamente, o web design responsivo é usar HTML e CSS para automaticamente redimensionar, encolher, esconder ou aumentar uma página para ficar boa em qualquer dispositivo.
 
-(JS e <script>)
+	(exemplo do uso da tag de viewport que é indispensável para designs responsivos)
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	
+	(exemplo de uma imagem responsiva que estica)
+	<img src='...' style='width: 100%;'>
+
+	(exemplo de uma imagem responsiva que não estica)
+	<img src='...' style='max-width: 100%'>
+	 > Assim a imagem sempre pode encolher, mas nunca esticar além das suas dimensões.
+
+	(exemplo de texto responsivo)
+	<h1 style='font-size: 10vw;'>FOO</h1>
+	 > 'vw' significa 'view width' ou 'largura da tela'. 1vw é 1% da largura da tela, portanto, quando maior for a janela de visualização, maior o texto.
+
+	(exemplo de uso da media query para mudar o estilo para diferentes tamanhos de dispositivos)
+	@media screen and (max-width: 800px) { ... }
+	 > Vai aplicar um estilo específico para dispositivos que tenham no máximo 800px de largura de tela. Ou seja, você está aplicando um estilo para uma tela pequena, provavelmente então iniciou fazendo um estilo para tela maiores. Há dois tipos de procedimentos nesse caso, você tem o mobile-first, onde primeiro você define o estilo para mobile primeiro e vai subindo usando a 'media query' para tamanhos mínimos de largura de tela (invés de máximo), ou você pode fazer ao contrário que é o desktop-first.
+
+# Entidades HTML
+ > São símbolos reservados em HTML. Por exemplo, em HTML, se você quiser expressar o '<' você vai ter que usar no documento html '&lt;'.
+
+	(sintaxe de entidades em HTML)
+	&entity_name;
+
+	(entidades úteis em HTML)
+	© = &copy;
+	® = &reg;
+	" = &quot;
+	& = &amp;
+	(espaço em branco) = &nbsp;
+	...
+
+ > Há também a possibilidade de usar o número da entidade para adicionar símbolos que não estão presentes no teclado.
+
+	(sintaxe de símbolos com número de entidade)
+	&#entity_number;
+
+	(exemplo do símbolo ∑)
+	&#8721;
+
+	(ver: https://www.w3schools.com/charsets/ref_utf_symbols.asp)
+
+# Emojis em HTML
+ > Emojis são apenas caracteres do conjunto de caracteres UTF-8, logo é importante incluir a tag 'meta' para definir o conjunto de caracteres UTF-8. E eles são incluídos no documento da mesma forma que um símbolo (através do número de entidade).
+
+	(exemplo de emojis redimensionados)
+	<p style='font-size: 48px;'>
+	&#128512; &#128512; &#128512;
+	</p>
+
+# Formulários
+
+
+
+# Valide seu documento HTML com o validador da W3C : validator.w3.org
+
+(Boas práticas, JS e <script>)
+
+
 
 

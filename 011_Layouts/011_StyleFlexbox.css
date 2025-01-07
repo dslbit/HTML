@@ -46,3 +46,9 @@ footer {
 	text-align: center;
 	font-size: 120%;
 }
+
+@media (max-width: 600px) {
+	section {
+		flex-direction: column;
+	}
+}
