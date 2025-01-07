@@ -442,6 +442,8 @@
  > Além de ajudarem a organizar o conteúdo de uma página, as listas melhoram a legibilidade da página, melhoram a acessibilidade e podem receber um estilo diferente através do CSS. Além disso, as listas ajudam motores de busca a entender melhor a estrutura da sua página facilitando a exibição das informações e facilitando a navegação.
  > Listas não ordenadas enfatizam itens igualmente diferentes de uma lista ordenada.
 
+(Day 6)
+
 # Elementos "block" e "inline"
  > Elementos que são definidos como 'block', por padrão, sempre começam em uma nova linha e tomam toda a largura 'width' do documento. Exemplos desses elementos são os elementos 'p' e 'div'.
 	(exemplo de elementos 'block' em HTML)
@@ -501,4 +503,57 @@
 	(exemplo do uso do atributo 'name')
 	<iframe src='demo_iframe.html' name='iframe_id1' title='The Google's Page - The most famous search engine out there used to search for any web page on the web.'></iframe>
 	<p><a href='https://www.google.com' target='iframe_id1'>Google's page</a></p>
+
+# Caminhos de arquivo em HTML
+ > Descreve o endereço (local) de um arquivo na estrutura de arquivo do site. Esses caminhos são utilizados quando há uma conexão externa de arquivos (páginas web, imagens, folhas de estilo em cascata [CSS], scripts [JavaScripts]).
+
+	(exemplo de endereço (caminho) absoluto de uma página)
+	<img src='https://www.foo.com/images/bar.png' alt='...'>
+
+	(exemplo de endereço relativo [relativo à página atual])
+	<img src='images/foo.jpg' alt='...'>
+
+	(exemplo de endereço relativo fora da pasta da página atual)
+	<img src='../images/foo.jpg' alt='...'>
+
+ > Sempre que possível use endereços relativos para manter a compatibilidade com os arquivos mesmo se os endereços mudarem no futuro.
+
+# O elemento 'meta'
+ > Na area comportamental da página "<head> ... </head>" há um elemento que fornece muitos meta-dados para o navegador e para motores de busca e isso ajuda a aumentar o ranking de SEO da página assim como a compatibilidade entre navegadores. Abaixo estão alguns exemplos de meta-dados que você pode fornecer sobre a sua página.
+
+	(exemplo: definindo o conjunto de caracteres da página)
+	<meta charset='UTF-8'>
+
+	(exemplo: definindo palavras chaves para motores de busca)
+	<meta name='keywords' content='Foo, Bar, Baz'>
+	
+	(exemplo: definindo uma descrição da página)
+	<meta name='description' content='Lorem Ipsum'>
+	
+	(exemplo: definindo o autor da página)
+	<meta name='author' content='Douglas Lima'>
+	
+	(exemplo: definindo parâmetros da janela de visualização "viewport" para a página se adaptar bem em diferentes tamanhos e escalas de telas)
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+ > Há também um elemento dessa parte comportamental chamado 'base', ele define a URL base da página atual para todos os endereços (links) relativos e de que modo esses links serão abertos (_blank, _self etc.), e você pode definir da seguinte forma: <base href='https://www.foo.com/' target='_blank'>
+
+(Day 7)
+
+# Elemento de disposição (layout) HTML e Técnicas
+ > HTML têm diversos elementos semânticos que define diferentes partes de uma página.
+ > O elemento '<header> ... </header>' define um cabeçalho para uma página ou para uma seção.
+ > O elemento '<nav> ... </nav>' define um conjunto de links de navegação.
+ > O elemento '<section> ... </section>' define uma seção na página.
+ > O elemento '<article> ... </article>' define um conteúdo independente, autônomo.
+ > O elemento '<aside> ... </aside>' define um conteúdo divergente ao conteúdo principal da página, tipo uma sidebar.
+ > O elemento '<footer> ... </footer>' define um rodapé para a página.
+ > O elemento '<details> ... </details>' define informações adicionais que o usuário pode abrir ou fechar como desejar.
+ > O elemento '<summary> ... </summary>' define um cabeçalho para o elemento 'details'.
+
+ > Junto com esses elementos e o conhecimento até aqui, é possível criar disposição de multi-colunas com diferentes técnicas: usando a propriedade float e clear do CSS; usando Flexbox do CSS; usando Grid do CSS ou usando um framework como, por exemplo, o Bootstrap.
+
+
+(JS e <script>)
+
 
