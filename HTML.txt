@@ -267,7 +267,7 @@
 
 	(padding em CSS)
 	padding: 30px;
-	 > 'padding' é o espaço entre o texto e a borda (é o espaço interno do elemento.
+	 > 'padding' é o espaço entre o texto e a borda (é o espaço interno do elemento).
 
 	(margin em CSS)
 	margin: 50px;
@@ -607,7 +607,32 @@
 	</p>
 
 # Formulários
+ > Formulário coletam dados vindos de usuários e normalmente esses dados são passados para um servidor para processamento.
+ > O elemento '<form> ... </form>' é o container para diferentes tipos de entrada de dados.
+  - O atributo 'action' do elemento 'form' define a ação a ser executado quando o formulário for enviado, geralmente os dados são enviados para uma página no servidor (exemplo: action_page.php), caso esse atributo for omitido a página atual do formulário será responsável pelo tratamento dos dados quando o formulário for enviado.
+   - O atributo 'target' informa onde o resultado vai ser exibido (na mesma página, em uma nova página... são os valores do elemento 'a').
+   - O atributo 'method' informa de que modo os dados serão passados para o servidor via protocolo HTTP. Por padrão o valor será 'post' onde os dados que serão passados para o servidor são exibidos na barra de endereço do navegador pois são via um método de variáveis através da URL. Já o valor 'post' faz com que os dados não fiquem visíveis na barra de endereço do navegador é feito por HTTP post transaction, é usado para informações pessoais ou importantes.
 
+   - IMPORTANTE: Não envie dados sensíveis ou importantes via o método 'get' em um formulário, pois ele fica exposto. Use-o para dados simples, por exemplos strings de pesquisa ou dados que o usuário queira salvar no navegador que sejam pequenos pois seu limite é de 2048 caracteres. Do contrário, para dados com limite grande e varíavel que precisam ser seguros e não podem ser salvos nos navegadores, use o método 'post'.
+
+   - O atributo 'autocomplete' permite o navegador sugerir valores anteriormentes inseridos pelo usuário e seus valores podem ser 'on' ou 'off'.
+   - O atributo 'novalidade' informa (através de um valor booleano) para os dados não serem validados assim que enviados para o servidor.
+
+ > O elemento '<input>' é o mais usado elemento de formulário e pode ser exibido de diferentes formas dependendo do seu atributo 'type' que pode ter os valores 'text', 'radio', 'checkbox', 'submit', 'button'. Além disse há os atributos 'name' (que é um identificador para o servidor na hora de capturar os dados), 'value' (informa um valor padrão para o campo).
+  - 'text' representa um campo de linha única para entrada de texto.
+  - 'radio' representa botões para seleção de _uma única opção_ dentre várias opções.
+  - 'checkbox' representa botões para seleção de nenhuma ou várias opções.
+  - 'submit' representa um botão para enviar dados do formulário.
+  - 'button' representa um botão que pode ser acionado (clicável).
+  - Outros são 'search', 'reset', 'tel', 'color', 'date', 'time', 'file', 'email', 'password', 'image', 'range',  entre outros.
+  - Há também restrições para o tipo 'input' e algumas são: 'required', 'autofocus', 'title' <&> 'pattern' (que especifica uma expressão regular para validação), 'placeholder', 'max', 'checked', 'disabled', 'min', 'readonly', 'maxlength' entre outros.
+  - O atributo 'form' para o elemento 'input' tem o valor do id do formulário 'form' e agrega dados mesmo que o 'input' esteja fora de 'form' na hora de enviar para o servidor.
+ > O elemento '<label> ... </label>' é um elemento que representa uma etiqueta para o campo de coleta de dado. O seu atributo 'for' permite receber como valor um 'id' de um campo para vincular o campo com a etiqueta, dessa forma ao clicar na etiqueta o próprio campo é acionado. Além de ser um elemento funcional, é um elemento semântico e de suma importância para acessibilidade leitores de tela.
+ > O elemento '<select> ... </select>' contém elementos '<option value='...'> ... </value>' e define uma lista suspensa para seleção de uma única opção onde uma opção padrão pode ser informada com o atributo 'selected'. O atributo 'size' informa a qtd de valores visíveis iniciais onde o padrão é 1. Além disse o atributo 'multiple' poder ser especificado para seleção de múltiplas opções com o teclado ou mouse.
+ > O elemento '<textarea name='msg'> ... </textarea>' define uma entrada de texto de múltiplas linhas que podem ser variável, e seu tamanho padrão pode ser definido com os atributos 'rows' e 'cols' mas seu tamanho também pode ser deinido com CSS usando as propriedades 'width' e 'height'.
+ > O elemento '<fieldset> ... </fieldset>' é um elemento container para agrupar dados relacionados e pode ser usado em conjunto com o elemento '<legend> ... </legend>' para dar um título ao grupo.
+ > O elemento '<datalist id='...'> ... </datalist>' em conjunto com os elementos '<option value='...'>' definem valores padrões para um determinado elemento 'input', e é importante notar que para isso funcionar o elemento 'input' precisa ter um atributo 'list' com o valor igual ai 'id' do elemento 'datalist'.
+ > O elemento '<output> ... </output>' em conjunto com os atributos 'name' e 'for' são utilizados para representar o resultado de um cálculo ou processamento de dados do formulário.
 
 
 # Valide seu documento HTML com o validador da W3C : validator.w3.org
