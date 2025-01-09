@@ -497,7 +497,7 @@
 	(exemplo da sintaxe básica do elemento 'iframe')
 	<iframe src='url' title='description'></iframe>
 
- > É sempre bom incluir o atributo 'title' nesse elemento pois ele auxilia leitores de tela a informar qual é o tipo de contúdo que está sendo mostrado para o usuário.
+ > É sempre bom incluir o atributo 'title' neste elemento pois ele auxilia leitores de tela a informar qual é o tipo de conteúdo que está sendo mostrado para o usuário.
  > Você pode alterar a largura, altura e borda do iframe usando as propriedades CSS 'width', 'height' e 'border'. É possível também definir um atributo chamado 'name' e usar ele como 'target' em um elemento '<a>' (âncora) para carregar uma página específica no próprio 'iframe' invés de uma nova aba.
 	
 	(exemplo do uso do atributo 'name')
@@ -519,7 +519,7 @@
  > Sempre que possível use endereços relativos para manter a compatibilidade com os arquivos mesmo se os endereços mudarem no futuro.
 
 # O elemento 'meta'
- > Na area comportamental da página "<head> ... </head>" há um elemento que fornece muitos meta-dados para o navegador e para motores de busca e isso ajuda a aumentar o ranking de SEO da página assim como a compatibilidade entre navegadores. Abaixo estão alguns exemplos de meta-dados que você pode fornecer sobre a sua página.
+ > Na área comportamental da página "<head> ... </head>" há um elemento que fornece muitos metadados para o navegador e para motores de busca e isso ajuda a aumentar o ranking de SEO da página assim como a compatibilidade entre navegadores. Abaixo estão alguns exemplos de metadados que você pode fornecer sobre a sua página.
 
 	(exemplo: definindo o conjunto de caracteres da página)
 	<meta charset='UTF-8'>
@@ -541,7 +541,7 @@
 (Day 7)
 
 # Elemento de disposição (layout) HTML e Técnicas
- > HTML têm diversos elementos semânticos que define diferentes partes de uma página.
+ > HTML têm diversos elementos semânticos que definem diferentes partes de uma página.
  > O elemento '<header> ... </header>' define um cabeçalho para uma página ou para uma seção.
  > O elemento '<nav> ... </nav>' define um conjunto de links de navegação.
  > O elemento '<section> ... </section>' define uma seção na página.
@@ -568,7 +568,7 @@
 
 	(exemplo de texto responsivo)
 	<h1 style='font-size: 10vw;'>FOO</h1>
-	 > 'vw' significa 'view width' ou 'largura da tela'. 1vw é 1% da largura da tela, portanto, quando maior for a janela de visualização, maior o texto.
+	 > 'vw' significa 'view width' ou 'largura da tela'. 1vw é 1% da largura da tela, portanto, quanto maior for a janela de visualização, maior o texto.
 
 	(exemplo de uso da media query para mudar o estilo para diferentes tamanhos de dispositivos)
 	@media screen and (max-width: 800px) { ... }
@@ -613,12 +613,12 @@
    - O atributo 'target' informa onde o resultado vai ser exibido (na mesma página, em uma nova página... são os valores do elemento 'a').
    - O atributo 'method' informa de que modo os dados serão passados para o servidor via protocolo HTTP. Por padrão o valor será 'post' onde os dados que serão passados para o servidor são exibidos na barra de endereço do navegador pois são via um método de variáveis através da URL. Já o valor 'post' faz com que os dados não fiquem visíveis na barra de endereço do navegador é feito por HTTP post transaction, é usado para informações pessoais ou importantes.
 
-   - IMPORTANTE: Não envie dados sensíveis ou importantes via o método 'get' em um formulário, pois ele fica exposto. Use-o para dados simples, por exemplos strings de pesquisa ou dados que o usuário queira salvar no navegador que sejam pequenos pois seu limite é de 2048 caracteres. Do contrário, para dados com limite grande e varíavel que precisam ser seguros e não podem ser salvos nos navegadores, use o método 'post'.
+   - IMPORTANTE: Não envie dados sensíveis ou importantes via o método 'get' em um formulário, pois ele fica exposto. Use-o para dados simples, por exemplo strings de pesquisa ou dados que o usuário queira salvar no navegador que sejam pequenos pois seu limite é de 2048 caracteres. Do contrário, para dados com limite grande e variável que precisam ser seguros e não podem ser salvos nos navegadores, use o método 'post'.
 
-   - O atributo 'autocomplete' permite o navegador sugerir valores anteriormentes inseridos pelo usuário e seus valores podem ser 'on' ou 'off'.
+   - O atributo 'autocomplete' permite o navegador sugerir valores anteriormente inseridos pelo usuário e seus valores podem ser 'on' ou 'off'.
    - O atributo 'novalidade' informa (através de um valor booleano) para os dados não serem validados assim que enviados para o servidor.
 
- > O elemento '<input>' é o mais usado elemento de formulário e pode ser exibido de diferentes formas dependendo do seu atributo 'type' que pode ter os valores 'text', 'radio', 'checkbox', 'submit', 'button'. Além disse há os atributos 'name' (que é um identificador para o servidor na hora de capturar os dados), 'value' (informa um valor padrão para o campo).
+ > O elemento '<input>' é o mais usado elemento de formulário e pode ser exibido de diferentes formas dependendo do seu atributo 'type' que pode ter os valores 'text', 'radio', 'checkbox', 'submit', 'button'. Além disso há os atributos 'name' (que é um identificador para o servidor na hora de capturar os dados), 'value' (informa um valor padrão para o campo).
   - 'text' representa um campo de linha única para entrada de texto.
   - 'radio' representa botões para seleção de _uma única opção_ dentre várias opções.
   - 'checkbox' representa botões para seleção de nenhuma ou várias opções.
@@ -628,16 +628,48 @@
   - Há também restrições para o tipo 'input' e algumas são: 'required', 'autofocus', 'title' <&> 'pattern' (que especifica uma expressão regular para validação), 'placeholder', 'max', 'checked', 'disabled', 'min', 'readonly', 'maxlength' entre outros.
   - O atributo 'form' para o elemento 'input' tem o valor do id do formulário 'form' e agrega dados mesmo que o 'input' esteja fora de 'form' na hora de enviar para o servidor.
  > O elemento '<label> ... </label>' é um elemento que representa uma etiqueta para o campo de coleta de dado. O seu atributo 'for' permite receber como valor um 'id' de um campo para vincular o campo com a etiqueta, dessa forma ao clicar na etiqueta o próprio campo é acionado. Além de ser um elemento funcional, é um elemento semântico e de suma importância para acessibilidade leitores de tela.
- > O elemento '<select> ... </select>' contém elementos '<option value='...'> ... </value>' e define uma lista suspensa para seleção de uma única opção onde uma opção padrão pode ser informada com o atributo 'selected'. O atributo 'size' informa a qtd de valores visíveis iniciais onde o padrão é 1. Além disse o atributo 'multiple' poder ser especificado para seleção de múltiplas opções com o teclado ou mouse.
- > O elemento '<textarea name='msg'> ... </textarea>' define uma entrada de texto de múltiplas linhas que podem ser variável, e seu tamanho padrão pode ser definido com os atributos 'rows' e 'cols' mas seu tamanho também pode ser deinido com CSS usando as propriedades 'width' e 'height'.
+ > O elemento '<select> ... </select>' contém elementos '<option value='...'> ... </value>' e define uma lista suspensa para seleção de uma única opção onde uma opção padrão pode ser informada com o atributo 'selected'. O atributo 'size' informa a quantidade de valores visíveis iniciais onde o padrão é 1. Além disso o atributo 'multiple' poder ser especificado para seleção de múltiplas opções com o teclado ou mouse.
+ > O elemento '<textarea name='msg'> ... </textarea>' define uma entrada de texto de múltiplas linhas que podem ser variável, e seu tamanho padrão pode ser definido com os atributos 'rows' e 'cols' mas seu tamanho também pode ser definido com CSS usando as propriedades 'width' e 'height'.
  > O elemento '<fieldset> ... </fieldset>' é um elemento container para agrupar dados relacionados e pode ser usado em conjunto com o elemento '<legend> ... </legend>' para dar um título ao grupo.
- > O elemento '<datalist id='...'> ... </datalist>' em conjunto com os elementos '<option value='...'>' definem valores padrões para um determinado elemento 'input', e é importante notar que para isso funcionar o elemento 'input' precisa ter um atributo 'list' com o valor igual ai 'id' do elemento 'datalist'.
+ > O elemento '<datalist id='...'> ... </datalist>' em conjunto com os elementos '<option value='...'>' definem valores padrões para um determinado elemento 'input', e é importante notar que para isso funcionar o elemento 'input' precisa ter um atributo 'list' com o valor igual ao 'id' do elemento 'datalist'.
  > O elemento '<output> ... </output>' em conjunto com os atributos 'name' e 'for' são utilizados para representar o resultado de um cálculo ou processamento de dados do formulário.
 
+# Multimídia
+ > Na Web, multimídia e áudio, música, vídeos, filmes e animações. Há muitos formatos de multimídia, mas praticamente é tudo o que você assiste ou ouve.
+ > Os primeiros navegadores só tinham suporte para texto, mas ao longo do tempo eles foram evoluindo e passaram a aceitar cores, fontes, imagens e multimídia.
+ > Dos formatos de vídeo mais conhecidos apenas os "MP4", "WebM", and "Ogg" são de suporte pela padronização do HTML. Para áudio apenas os formatos "MP3", "WAV", and "Ogg" são de suporte pela padronização do HTML.
+ > O elemento '<video> ... </video>' em conjunto com os elementos '<source src='...' type='...'> inserem um vídeo na página.
+	(exemplo de inserção de vídeo na página)
+	<video>
+		<source src='mov.mp4' type='video/mp4'>
+		<source src='mov.ogg' type='video/mp4'>
+		Seu navegador não suporta vídeos HTML.
+	</video>
+  - Os atributos 'width' e 'height' dão dimensão ao vídeo.
+  - O atributo 'controls' adiciona controles de pause, volume etc.
+  - O atributo 'autoplay' inicia o vídeo automaticamente assim que a página for carregada.
+  - O atributo 'muted' torna a reprodução muda de início.
+ > De modo similar ao elemento 'video' temos o elemento '<audio> ... </audio>' que também pode ser usado em conjunto com os elementos 'source' e nele temos disponíveis os atributos 'muted' e 'autoplay'.
+ > O elemento '<iframe> ... </iframe>' permite você exibir vídeos do YouTube na sua página. Os atributos são 'width', 'height', 'src', e na URL do link do vídeo você pode especificar 'autoplay=', 'mute=', 'loop=', 'controls=' e 'playlist='.
+
+# HTML APIs
+ - HTML Geolocation: utilizada para localizar a posição do usuário e geralmente é mais preciso em dispositivos com GPS, tipo Smartphones.
+ - HTML Drag/Drop: Usado para arrastar um objeto na página para outro local.
+ - HTML Web Storage: Usado para armazenar dados no navegador do usuário.
+ - HTML Web Workers: É uma maneira de usar o JS para executar trabalho mesmo que a página esteja em segundo plano, congelada, ou sobrecarregada.
+ - HTML SSE (Server-Sent Events): É usado para uma página receber dados (atualizações) de forma automática de um servidor.
+
+# Elementos de código em HTML
+ > Exibir código no documento HTML pode ser feito com as tags '<pre> <code> ... </code> </pre>' para manter a formatação.
+ > O elemento '<samp> ... </samp>' em conjunto com 'p' pode ser usado para exibir a saída de um outro programa na página.
+ > O elemento '<var> ... </var>' representa uma variável na programação ou numa expressão matemática.
+
+# HTML JavaScript
+ > O JavaScript (JS) é uma linguagem de programação que roda no navegador. O navegador tem um interpretador para essa linguagem de programação e ela é interpretada em tempo real assim que uma página começa a carregar. O JS é usado para tornar páginas dinâmicas e interativas. Para inserir um código JS no documento HTML podemos usar o elemento '<script> ... </script>' e inserir o código ali mesmo ou usar o atributo 'src' para apontar para um arquivo externo. O elemento '<noscript> ... </noscript>' fornece um conteúdo para usuários que desativaram o JS no navegador deles.
+ > Com JS você pode usar o elemento '<canvas id='' width='' height=''></canvas>' para desenhar (aplicar elementos gráficos) na página linhas, retângulos, text, imagens etc. 'Canvas' é renderizado pixel por pixel a ao final de cada renderização o navegador não salva estado algum. Ideal para jogos e renderização complexas; dependente da resolução.
+ > Temos também o elemento '<svg> ... </svg>' também para gráficos 2D, porém ele é uma maneira de representar gráficos através da marcação XML e é compatível com todos os navegadores modernos, além de ser uma recomendação da W3C para gráfico pois não perdem qualidade de acordo com o tamanho do dispositivo. Ele pode ser animado e o navegador salva cada forma desenhada como um objeto separado. Não recomendado para jogos e pode ser lento para renderizações complexas; independente da resolução.
 
 # Valide seu documento HTML com o validador da W3C : validator.w3.org
-
-(Boas práticas, JS e <script>)
 
 
 
